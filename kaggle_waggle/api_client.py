@@ -39,9 +39,9 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from kaggle.configuration import Configuration
+from kaggle_waggle.configuration import Configuration
 import kaggle.models
-from kaggle import rest
+from kaggle_waggle import rest
 
 
 class ApiClient(object):

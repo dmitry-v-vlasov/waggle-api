@@ -2,7 +2,7 @@ import os
 import unittest
 from typing import List
 
-from kaggle.api.kaggle_api_extended import KaggleApi
+from kaggle_waggle.api.kaggle_api_extended import KaggleApi
 
 MODEL_HANDLE = "keras/bert"
 MODEL_ID = 2819

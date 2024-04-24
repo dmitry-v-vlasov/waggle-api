@@ -273,7 +273,7 @@ class ResumableFileUpload(object):
 
 
 class KaggleApi(KaggleApi):
-    __version__ = '1.6.12.a1'
+    __version__ = '1.6.12.a2'
 
     CONFIG_NAME_PROXY = 'proxy'
     CONFIG_NAME_COMPETITION = 'competition'

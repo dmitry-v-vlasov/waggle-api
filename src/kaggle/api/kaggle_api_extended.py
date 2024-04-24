@@ -30,7 +30,7 @@ import time
 import zipfile
 import tempfile
 from ..api_client import ApiClient
-from kaggle.configuration import Configuration
+from kaggle_waggle.configuration import Configuration
 from .kaggle_api import KaggleApi
 from ..models.api_blob_type import ApiBlobType
 from ..models.collaborator import Collaborator
@@ -256,7 +256,7 @@ class ResumableFileUpload(object):
 
 
 class KaggleApi(KaggleApi):
-    __version__ = '1.6.12.a1'
+    __version__ = '1.6.12.a2'
 
     CONFIG_NAME_PROXY = 'proxy'
     CONFIG_NAME_COMPETITION = 'competition'

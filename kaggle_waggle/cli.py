@@ -34,8 +34,8 @@
 from __future__ import print_function
 import argparse
 import json
-from kaggle import api
-from kaggle import KaggleApi
+from kaggle_waggle import api
+from kaggle_waggle import KaggleApi
 from .rest import ApiException
 import six
 

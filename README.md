@@ -47,8 +47,8 @@ hatch run python
 ```
 
 ```python
-import kaggle
-from kaggle.api.kaggle_api_extended import KaggleApi
+import kaggle_waggle
+from kaggle_waggle.api.kaggle_api_extended import KaggleApi
 api = KaggleApi()
 api.authenticate()
 api.model_list_cli()
@@ -61,7 +61,7 @@ Next Page Token = [...]
 Or in a single command:
 
 ```sh
-hatch run python -c "import kaggle; from kaggle.api.kaggle_api_extended import KaggleApi; api = KaggleApi(); api.authenticate(); api.model_list_cli()"
+hatch run python -c "import kaggle_waggle; from kaggle_waggle.api.kaggle_api_extended import KaggleApi; api = KaggleApi(); api.authenticate(); api.model_list_cli()"
 ```
 
 ### Example
@@ -78,7 +78,7 @@ Let's change the `model_list_cli` method in the source file:
 ❯ hatch run compile
 [...]
 
-❯ hatch run python -c "import kaggle; from kaggle.api.kaggle_api_extended import KaggleApi; api = KaggleApi(); api.authenticate(); api.model_list_cli()"
+❯ hatch run python -c "import kaggle_waggle; from kaggle_waggle.api.kaggle_api_extended import KaggleApi; api = KaggleApi(); api.authenticate(); api.model_list_cli()"
 hello Kaggle CLI update
 Next Page Token = [...]
 ```
