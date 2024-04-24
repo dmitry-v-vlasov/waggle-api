@@ -5,8 +5,8 @@ from setuptools import setup, find_packages
 # file is likely not being used anymore. We should verify and merge this into
 # pyproject.toml instead of maintaining both flows.
 setup(
-    name='waggle',
-    version='1.6.12-w01',
+    name='kaggle_waggle',
+    version='1.6.12.a1',
     description='Kaggle API',
     long_description=
     ('Kaggle Waggle API (for https://www.kaggle.com), forked to be used in a Python script primarily.'
