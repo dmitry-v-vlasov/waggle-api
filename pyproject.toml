@@ -18,7 +18,7 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
-keywords = ["Kaggle", "Waggle", "API"]
+keywords = ["Kaggle", "API"]
 requires-python = ">=3.7"
 dependencies = [
   "bleach", 
@@ -37,11 +37,11 @@ dependencies = [
 ]
 
 [project.scripts]
-kaggle = "kaggle.cli:main"
+kaggle = "kaggle_waggle.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/dmitry-v-vlasov/waggle-api"
-Issues = "https://github.com/dmitry-v-vlasov/waggle-api/issues"
+Homepage = "https://github.com/Kaggle/kaggle-api"
+Issues = "https://github.com/Kaggle/kaggle-api/issues"
 
 [tool.hatch.version]
 path = "src/__init__.py"

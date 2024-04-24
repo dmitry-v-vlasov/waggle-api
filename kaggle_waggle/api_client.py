@@ -40,7 +40,7 @@ import six
 from six.moves.urllib.parse import quote
 
 from kaggle_waggle.configuration import Configuration
-import kaggle.models
+import kaggle_waggle.models
 from kaggle_waggle import rest
 
 
@@ -82,7 +82,7 @@ class ApiClient(object):
             configuration = Configuration()
         self.configuration = configuration
 
-        self.pool = ThreadPool()
+        # self.pool = ThreadPool()
         self.rest_client = rest.RESTClientObject(configuration)
         self.default_headers = {}
         if header_name is not None:
@@ -270,7 +270,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(kaggle.models, klass)
+                klass = getattr(kaggle_waggle.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)
@@ -325,22 +325,22 @@ class ApiClient(object):
             If parameter async_req is False or missing,
             then the method will return the response directly.
         """
-        if not async_req:
-            return self.__call_api(resource_path, method,
-                                   path_params, query_params, header_params,
-                                   body, post_params, files,
-                                   response_type, auth_settings,
-                                   _return_http_data_only, collection_formats,
-                                   _preload_content, _request_timeout)
-        else:
-            thread = self.pool.apply_async(self.__call_api, (resource_path,
-                                           method, path_params, query_params,
-                                           header_params, body,
-                                           post_params, files,
-                                           response_type, auth_settings,
-                                           _return_http_data_only,
-                                           collection_formats,
-                                           _preload_content, _request_timeout))
+        # if not async_req:
+        return self.__call_api(resource_path, method,
+                                path_params, query_params, header_params,
+                                body, post_params, files,
+                                response_type, auth_settings,
+                                _return_http_data_only, collection_formats,
+                                _preload_content, _request_timeout)
+        # else:
+        #     thread = self.pool.apply_async(self.__call_api, (resource_path,
+        #                                    method, path_params, query_params,
+        #                                    header_params, body,
+        #                                    post_params, files,
+        #                                    response_type, auth_settings,
+        #                                    _return_http_data_only,
+        #                                    collection_formats,
+        #                                    _preload_content, _request_timeout))
         return thread
 
     def request(self, method, url, query_params=None, headers=None,

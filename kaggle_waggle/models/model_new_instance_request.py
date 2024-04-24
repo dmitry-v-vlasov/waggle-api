@@ -32,7 +32,7 @@ import re  # noqa: F401
 
 import six
 
-from kaggle.models.upload_file import UploadFile  # noqa: F401,E501
+from kaggle_waggle.models.upload_file import UploadFile  # noqa: F401,E501
 
 
 class ModelNewInstanceRequest(object):

@@ -47,7 +47,7 @@ import time
 import zipfile
 import tempfile
 from ..api_client import ApiClient
-from kaggle.configuration import Configuration
+from kaggle_waggle.configuration import Configuration
 from .kaggle_api import KaggleApi
 from ..models.api_blob_type import ApiBlobType
 from ..models.collaborator import Collaborator
@@ -273,7 +273,7 @@ class ResumableFileUpload(object):
 
 
 class KaggleApi(KaggleApi):
-    __version__ = '1.6.12.a2'
+    __version__ = '1.6.12a9'
 
     CONFIG_NAME_PROXY = 'proxy'
     CONFIG_NAME_COMPETITION = 'competition'
@@ -300,6 +300,7 @@ class KaggleApi(KaggleApi):
             if e.errno == errno.EROFS:  # Check if filesystem is read-only
                 print("Read-only filesystem, skipping creating config directory.")
             else:
+                print(f"Unexpected OSError: {e}")
                 raise
 
     config_file = 'kaggle.json'

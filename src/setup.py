@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 # pyproject.toml instead of maintaining both flows.
 setup(
     name='kaggle_waggle',
-    version='1.6.12.a2',
+    version='1.6.12a9',
     description='Kaggle API',
     long_description=
     ('Kaggle Waggle API (for https://www.kaggle.com), forked to be used in a Python script primarily.'

@@ -32,7 +32,7 @@ import re  # noqa: F401
 
 import six
 
-from kaggle.models.dataset_column import DatasetColumn  # noqa: F401,E501
+from kaggle_waggle.models.dataset_column import DatasetColumn  # noqa: F401,E501
 
 
 class UploadFile(object):

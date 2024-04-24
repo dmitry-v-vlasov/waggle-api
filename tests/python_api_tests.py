@@ -1,5 +1,5 @@
 # coding=utf-8
-from kaggle import api
+from kaggle_waggle import api
 
 up_file = 'sample_submission.csv'
 description = 'House prices submission message'

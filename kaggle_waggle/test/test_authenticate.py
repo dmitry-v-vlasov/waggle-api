@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from kaggle.api.kaggle_api_extended import KaggleApi
+from kaggle_waggle.api.kaggle_api_extended import KaggleApi
 
 # python -m unittest tests.test_authenticate
 
