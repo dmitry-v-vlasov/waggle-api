@@ -1,6 +1,6 @@
 # Kaggle API
 
-Official API for https://www.kaggle.com, accessible using a command line tool implemented in Python 3.  
+Kaggle Waggle API (for https://www.kaggle.com), forked to be used in a Python script primarily.
 
 [User documentation](docs/README.md)
 
@@ -11,7 +11,7 @@ Ensure you have Python 3 and the package manager `pip` installed.
 Run the following command to access the Kaggle API using the command line:
 
 ```sh
-pip install kaggle
+pip install kaggle-waggle
 ```
 
 ## Development

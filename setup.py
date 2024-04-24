@@ -5,22 +5,22 @@ from setuptools import setup, find_packages
 # file is likely not being used anymore. We should verify and merge this into
 # pyproject.toml instead of maintaining both flows.
 setup(
-    name='kaggle',
+    name='kaggle-waggle',
     version='1.6.12',
-    description='Kaggle API',
+    description='Kaggle Waggle API',
     long_description=
-    ('Official API for https://www.kaggle.com, accessible using a command line '
-     'tool implemented in Python. Beta release - Kaggle reserves the right to '
+    ('Kaggle Waggle API (for https://www.kaggle.com), forked to be used in a Python script primarily.'
+     'Beta release - Kaggle reserves the right to '
      'modify the API functionality currently offered.'),
     author='Kaggle',
     author_email='support@kaggle.com',
-    url='https://github.com/Kaggle/kaggle-api',
+    url='https://github.com/dmitry-v-vlasov/waggle-api',
     project_urls={
         'Documentation': 'https://www.kaggle.com/docs/api',
-        'GitHub': 'https://github.com/Kaggle/kaggle-api',
-        'Tracker': 'https://github.com/Kaggle/kaggle-api/issues',
+        'GitHub': 'https://github.com/dmitry-v-vlasov/waggle-api',
+        'Tracker': 'https://github.com/dmitry-v-vlasov/waggle-api/issues',
     },
-    keywords=['Kaggle', 'API'],
+    keywords=['Kaggle', 'Waggle', 'API'],
     entry_points={'console_scripts': ['kaggle = kaggle.cli:main']},
     install_requires=[
         'six >= 1.10',

@@ -32,6 +32,7 @@
 
 # coding=utf-8
 from __future__ import print_function
+import errno
 import csv
 from datetime import datetime
 import io
@@ -293,7 +294,13 @@ class KaggleApi(KaggleApi):
     config_dir = os.environ.get('KAGGLE_CONFIG_DIR') or os.path.join(
         expanduser('~'), '.kaggle')
     if not os.path.exists(config_dir):
-        os.makedirs(config_dir)
+        try:
+            os.makedirs(config_dir)
+        except OSError as e:
+            if e.errno == errno.EROFS:  # Check if filesystem is read-only
+                print("Read-only filesystem, skipping creating config directory.")
+            else:
+                raise
 
     config_file = 'kaggle.json'
     config = os.path.join(config_dir, config_file)
